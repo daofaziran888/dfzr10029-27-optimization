@@ -16,6 +16,7 @@ const Scheduler = () => import('@/views/scheduler/index.vue')
 const Cache = () => import('@/views/cache/index.vue')
 const Pipeline = () => import('@/views/pipeline/index.vue')
 const Model = () => import('@/views/model/index.vue')
+const ModelVersionAuth = () => import('@/views/model_version_auth/index.vue')
 const DataMart = () => import('@/views/data_mart/index.vue')
 const Export = () => import('@/views/export/index.vue')
 const Audit = () => import('@/views/audit/index.vue')
@@ -39,6 +40,7 @@ const router = createRouter({
     { path: '/cache', name: 'cache', component: Cache },
     { path: '/pipeline', name: 'pipeline', component: Pipeline },
     { path: '/model', name: 'model', component: Model },
+    { path: '/model_version_auth', name: 'model_version_auth', component: ModelVersionAuth },
     { path: '/data_mart', name: 'data_mart', component: DataMart },
     { path: '/export', name: 'export', component: Export },
     { path: '/audit', name: 'audit', component: Audit },

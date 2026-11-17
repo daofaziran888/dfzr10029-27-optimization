@@ -33,6 +33,7 @@ class ActionPayload(BaseModel):
 
     action: str
     remark: str | None = None
+    group: str | None = None  # 当前用户组：部署等需要鉴权的动作按用户组校验
 
 
 
@@ -215,6 +216,18 @@ class ModelEntry(BaseModel):
     field_5: str | None = None  # 目标字段
     field_6: str | None = None  # 评估指标
     field_7: str | None = None  # 模型状态
+
+class ModelVersionAuthEntry(BaseModel):
+    """模型版本授权记录明细结构。"""
+
+    field_0: str | None = None  # 授权编号
+    field_1: str | None = None  # 模型编号
+    field_2: str | None = None  # 模型版本
+    field_3: str | None = None  # 授权用户组
+    field_4: str | None = None  # 授权来源
+    field_5: str | None = None  # 特征快照范围
+    field_6: str | None = None  # 核对结果
+    field_7: str | None = None  # 记录状态
 
 class DataMartEntry(BaseModel):
     """集市表明细结构。"""

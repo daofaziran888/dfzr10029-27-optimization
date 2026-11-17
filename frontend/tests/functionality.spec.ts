@@ -369,6 +369,28 @@ const modules: ModuleCase[] = [
     "shape": "dag-graph"
   },
   {
+    "key": "model_version_auth",
+    "fields": [
+      "授权编号",
+      "模型编号",
+      "模型版本",
+      "授权用户组",
+      "授权来源",
+      "特征快照范围",
+      "核对结果",
+      "记录状态"
+    ],
+    "actions": [
+      "核对授权",
+      "回收授权"
+    ],
+    "actionTargets": [
+      "生效中",
+      "已回收"
+    ],
+    "shape": "crud-table"
+  },
+  {
     "key": "data_mart",
     "fields": [
       "表编号",
